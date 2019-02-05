@@ -43,10 +43,7 @@ public class DynamicSynonymPlugin extends Plugin implements AnalysisPlugin {
                                                ThreadPool threadPool,
                                                ResourceWatcherService resourceWatcherService,
                                                ScriptService scriptService,
-                                               NamedXContentRegistry xContentRegistry,
-                                               Environment environment,
-                                               NodeEnvironment nodeEnvironment,
-                                               NamedWriteableRegistry namedWriteableRegistry) {
+                                               NamedXContentRegistry xContentRegistry) {
         Collection<Object> components = new ArrayList<>();
         components.add(pluginComponent);
         return components;
