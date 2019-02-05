@@ -22,6 +22,7 @@ import org.elasticsearch.plugins.Plugin;
 import org.elasticsearch.script.ScriptService;
 import org.elasticsearch.threadpool.ThreadPool;
 import org.elasticsearch.watcher.ResourceWatcherService;
+import org.elasticsearch.search.SearchRequestParsers;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -43,10 +44,8 @@ public class DynamicSynonymPlugin extends Plugin implements AnalysisPlugin {
                                                ThreadPool threadPool,
                                                ResourceWatcherService resourceWatcherService,
                                                ScriptService scriptService,
-                                               NamedXContentRegistry xContentRegistry,
-                                               Environment environment,
-                                               NodeEnvironment nodeEnvironment,
-                                               NamedWriteableRegistry namedWriteableRegistry) {
+					       SearchRequestParsers searchRequestParsers,
+                                               NamedXContentRegistry xContentRegistry) {
         Collection<Object> components = new ArrayList<>();
         components.add(pluginComponent);
         return components;
